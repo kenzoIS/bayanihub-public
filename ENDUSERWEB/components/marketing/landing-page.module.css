@@ -1,0 +1,279 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #ffc300;
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0 0 64px;
+}
+
+.heroImage {
+  position: absolute;
+  inset: -1.5% -3% 0;
+  background:
+    linear-gradient(rgba(41, 101, 162, 0.5), rgba(41, 101, 162, 0.5)),
+    url("/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  transform: scale(1.035);
+}
+
+.heroImage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 58%, rgba(255, 255, 255, 0.12), transparent 12%),
+    radial-gradient(circle at 54% 48%, rgba(255, 158, 62, 0.24), transparent 18%),
+    radial-gradient(circle at 78% 56%, rgba(255, 255, 255, 0.14), transparent 14%),
+    linear-gradient(90deg, rgba(34, 28, 14, 0.15), rgba(34, 28, 14, 0.02) 22%, rgba(34, 28, 14, 0.1) 72%, rgba(34, 28, 14, 0.22));
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 29, 0, 0.42);
+}
+
+.bottomBand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  background: #2965A2;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 28px 44px 86px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: min(100%, 640px);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.logoRing {
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 120px;
+  border-radius: 36px;
+  background: #5E70DC;
+  z-index: 3;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.logoInner {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 100px;
+  border-radius: 32px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  box-shadow: none;
+  z-index: 4;
+  transition: transform 260ms ease;
+}
+
+.logoMark {
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.logoImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 260ms ease;
+}
+
+.content {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 18px 20px 40px;
+}
+
+.heroBlock {
+  width: 100%;
+  animation: fadeUp 700ms ease both;
+}
+
+.intro {
+  margin: 0 0 18px;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  color: white;
+}
+
+.bayaniHubText {
+  font-style: normal;
+  color: #5E70DC;
+  font-weight: 800;
+}
+
+.headline {
+  max-width: 940px;
+  margin: 0 auto;
+  color: white;
+  font-size: clamp(3.25rem, 5.6vw, 4.55rem);
+  line-height: 1.06;
+  font-weight: 700;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.headline span {
+  color: #5E70DC;
+  transition: color 220ms ease, text-shadow 220ms ease;
+}
+
+.headline:hover span {
+  color: #7b8cff;
+  text-shadow: 0 6px 18px rgba(123, 140, 255, 0.35);
+}
+
+.support {
+  max-width: 700px;
+  margin: 24px auto 0;
+  color: white;
+  font-size: 17px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.aboutAnchor {
+  scroll-margin-top: 120px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  margin-top: 44px;
+  flex-wrap: wrap;
+}
+
+.primaryAction,
+.secondaryAction {
+  min-width: 180px;
+  min-height: 54px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.primaryAction {
+  background: #3B53C1;
+  color: white;
+  border: 1px solid #3B53C1;
+}
+
+.secondaryAction {
+  min-width: 180px;
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.primaryAction:hover,
+.secondaryAction:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.primaryAction:active,
+.secondaryAction:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.secondaryAction:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.header:hover .logoRing {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 12px 24px rgba(94, 112, 220, 0.35);
+}
+
+.header:hover .logoInner {
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.header:hover .logoImage {
+  transform: scale(1.04);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .overlay {
+    padding: 22px 16px 74px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .logoRing {
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+  }
+
+  .logoInner {
+    left: 50%;
+    top: -25px;
+    transform: translateX(-50%);
+  }
+
+  .content {
+    padding-top: 30px;
+  }
+}

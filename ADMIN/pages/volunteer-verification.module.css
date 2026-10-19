@@ -1,0 +1,515 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  width: 100%;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .mainContent {
+    padding: 2rem 2.5rem;
+  }
+}
+
+/* Page Header */
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .pageHeader {
+    flex-direction: row;
+  }
+}
+
+.headerContent {
+  /* Base styles */
+  text-align: center;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #5c6ed5;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  width: fit-content;
+  font-size: 0.875rem;
+}
+
+.backButton:hover {
+  background-color: #3e5a99;
+}
+
+.headerSpacer {
+  width: fit-content;
+  min-width: 85px;
+}
+
+.svgIcon16 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.pageTitle {
+  color: #171717;
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.pageSubtitle {
+  color: #737373;
+  font-size: 0.875rem;
+}
+
+.lastUpdated {
+  color: #737373;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+/* Main Grid Layout */
+.gridLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .gridLayout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mainColumn {
+  /* For left side content */
+}
+
+@media (min-width: 1024px) {
+  .mainColumn {
+    grid-column: span 2;
+  }
+}
+
+.sidebarColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  color: #171717;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+/* Search Section */
+.searchDescription {
+  color: #737373;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.searchInputWrapper {
+  position: relative;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  border-color: #5c6ed5;
+  box-shadow: 0 0 0 1px #5c6ed5;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #737373;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* Button Styles */
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buttonPrimary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #5c6ed5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonPrimary:hover {
+  background-color: #3e5a99;
+}
+
+.buttonSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e5e5;
+  color: #171717;
+  background-color: white;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttonSecondary:hover {
+  background-color: #fafafa;
+}
+
+/* Search Results */
+.resultsContainer {
+  margin-top: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.noResults {
+  color: #737373;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Volunteer Card */
+.volunteerCard {
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.volunteerCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.volunteerInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.volunteerAvatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(to bottom right, rgba(92, 110, 213, 0.1), rgba(62, 90, 153, 0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.125rem;
+}
+
+.volunteerDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.volunteerName {
+  color: #171717;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.volunteerHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusVerified {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.statusVerifiedDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #22c55e;
+}
+
+.statusPending {
+  background-color: #fef3c7;
+  color: #854d0e;
+}
+
+.statusPendingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #eab308;
+}
+
+.statusNotVolunteer {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.statusNotVolunteerDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ef4444;
+}
+
+.statusInactive {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.statusInactiveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #9ca3af;
+}
+
+.volunteerEmail {
+  color: #737373;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.volunteerMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #737373;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metaIcon {
+  width: 12px;
+  height: 12px;
+}
+
+/* Stats Cards */
+.statItem {
+  margin-bottom: 1.5rem;
+}
+
+.statItem:last-child {
+  margin-bottom: 0;
+}
+
+.statLabel {
+  color: #737373;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.statValue {
+  color: #171717;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+/* Verification Status Legend */
+.statusLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  color: #525252;
+  font-size: 0.875rem;
+}
+
+/* Recent Activity */
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.activityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+}
+
+.activityIcon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.activityContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.activityMessage {
+  color: #525252;
+  font-size: 0.875rem;
+}
+
+.activityTime {
+  color: #737373;
+  font-size: 0.75rem;
+}
+
+/* Navigation Links */
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: 640px) {
+  .linkContainer {
+    flex-direction: row;
+  }
+}
+
+.link {
+  color: #5c6ed5;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  color: #e5e5e5;
+}

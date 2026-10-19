@@ -1,0 +1,70 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+:root {
+  --radius: 0.5rem;
+  --font-family: Calibri, "Calibri", "Segoe UI", Tahoma, sans-serif;
+}
+
+* {
+  border-color: #e5e5e5;
+  font-family: var(--font-family);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: #ffffff;
+  color: #171717;
+}
+
+:where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-family: var(--font-family);
+}
+
+pre,
+code {
+  overflow-x: auto;
+  white-space: pre;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* ── Uniform page transition ────────────────────────────────────── */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition-wrapper {
+  animation: pageEnter 0.32s ease-out both;
+}
+
+/* Custom Scrollbar globally overriding default aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5C6ED5; /* Using primary theme color */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3E5A99;
+}

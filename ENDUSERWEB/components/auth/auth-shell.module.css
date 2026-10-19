@@ -1,0 +1,294 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 195, 0, 0.16), transparent 22%),
+    radial-gradient(circle at 90% 100%, rgba(255, 195, 0, 0.12), transparent 20%),
+    linear-gradient(145deg, #fffef8 0%, #f4ecd7 100%);
+}
+
+.blob {
+  position: absolute;
+  width: 1856px;
+  height: 864px;
+  border-radius: 9999px;
+  background: var(--primary);
+  z-index: 0;
+}
+
+.blobTop {
+  top: -527px;
+  left: -287px;
+}
+
+.blobBottom {
+  bottom: -380px;
+  left: -287px;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cardFrame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoRing {
+  width: 140px;
+  height: 140px;
+  border-radius: 9999px;
+  background: var(--primary);
+  position: absolute;
+  top: -10px;
+  z-index: 1;
+}
+
+.logoBadge {
+  width: 120px;
+  height: 120px;
+  border-radius: 9999px;
+  margin-bottom: -60px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #fff5c3, #f9d54e);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  color: #7f6000;
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.card {
+  width: 505px;
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px 4px rgba(0, 0, 0, 0.15);
+  padding: 80px 60px 36px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.welcome {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 4px;
+}
+
+.brand {
+  margin: 0;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.title {
+  margin: 6px 0 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--text-soft);
+  text-align: center;
+  font-size: 14px;
+}
+
+.alertError,
+.alertSuccess {
+  width: 100%;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.alertError {
+  background: #fff0f0;
+  border: 1px solid #ffb3b3;
+  color: #b11616;
+}
+
+.alertSuccess {
+  background: #effbf3;
+  border: 1px solid #b8e5c8;
+  color: var(--success);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  width: 100%;
+}
+
+.input,
+.passwordBox {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 15px;
+  border: 1px solid var(--line);
+  background: transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input {
+  padding: 0 16px;
+}
+
+.input:focus,
+.passwordBox:focus-within {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 195, 0, 0.18);
+}
+
+.inputError {
+  border-color: var(--danger) !important;
+}
+
+.passwordBox {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 16px;
+}
+
+.passwordInput {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+
+.toggle {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #6c6c6c;
+  font-size: 16px;
+}
+
+.fieldError {
+  display: block;
+  margin-top: 4px;
+  margin-left: 4px;
+  font-size: 11px;
+  color: var(--danger);
+}
+
+.rowEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.linkAction {
+  color: var(--primary-dark);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.submit {
+  width: 180px;
+  height: 40px;
+  margin: 2px auto 0;
+  border: 0;
+  border-radius: 15px;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 18px auto 0;
+  gap: 12px;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.dividerText {
+  font-size: 13px;
+}
+
+.socialRow {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.socialButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  background: var(--social-bg);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.footer strong {
+  color: var(--primary-dark);
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 14px;
+  }
+
+  .card {
+    width: min(100%, 505px);
+    padding: 76px 24px 28px;
+  }
+
+  .brand {
+    font-size: 44px;
+  }
+}

@@ -1,0 +1,329 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 2.5rem;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLeft { display: flex; align-items: center; gap: 2.5rem; }
+.logoContainer { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.logo { width: 45px; height: 45px; object-fit: contain; }
+.brand { font-size: 24px; font-weight: 400; color: #111827; letter-spacing: -0.5px; }
+
+.navLinks { display: flex; gap: 2.5rem; align-items: center; }
+.navLink { font-size: 0.95rem; font-weight: 600; color: #4b5563; text-decoration: none; transition: color 0.2s; }
+.navLink:hover { color: #1e3a8a; }
+.activeLink { color: #1e3a8a; }
+
+.navRight { display: flex; align-items: center; gap: 1.25rem; color: #4b5563; }
+.iconBtn { background: none; border: none; cursor: pointer; color: inherit; display: flex; }
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* LEFT CARD */
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  width: 100%;
+  flex: 1;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.userName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.passType {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.refRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.refLabel { font-weight: 600; text-transform: uppercase; }
+.refValue { font-weight: 700; color: #374151; }
+
+.copyBtn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.copiedText { color: #16a34a; font-size: 0.75rem; }
+
+.divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.submitLabel {
+  font-size: 0.65rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem 0;
+}
+
+.submitDate {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #2563eb;
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+}
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.infoBanner {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.infoIcon { color: #3b82f6; flex-shrink: 0; }
+.infoText {
+  font-size: 0.875rem;
+  color: #1e40af;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* RIGHT CARD */
+.rightCard {
+  align-items: center;
+  max-width: 500px;
+}
+
+.approvalBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkCircle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #16a34a;
+}
+
+.approvalTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  text-align: center;
+}
+
+.approvalSub {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  text-align: center;
+}
+
+.qrContainer {
+  width: 100%;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrDarkBox {
+  background-color: #0f2a3d;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 260px;
+}
+
+.qrWhiteBox {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.qrLabels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.qrLabelTop {
+  font-size: 0.65rem;
+  color: #6ee7b7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.qrLabelMid {
+  font-size: 0.65rem;
+  color: #fde047;
+  margin: 0;
+}
+
+.scanText {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 1rem 0 1.5rem 0;
+  font-weight: 600;
+}
+
+.saveBtn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.saveBtn:hover { background-color: #1d4ed8; }
+
+.lastUpdated {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin: 1.5rem 0 0 0;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #e5e7eb;
+  background-color: transparent;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: #9ca3af;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}
+.footerLinks { display: flex; gap: 1.5rem; }
+.footerLinks a { text-decoration: none; color: inherit; }
+.footerLinks a:hover { color: #4b5563; }
+
+/* Deployment Details */
+.deployBtn {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.deployBtn:hover { background-color: #f8fafc; }
+
+.deployDetails {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+.deployTitle { font-size: 0.875rem; font-weight: 700; margin: 0 0 0.5rem 0; color: #0f172a; }
+.deployText { font-size: 0.875rem; color: #475569; margin: 0 0 0.25rem 0; }
+.mapLink { font-size: 0.875rem; color: #2563eb; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 0.5rem; }
